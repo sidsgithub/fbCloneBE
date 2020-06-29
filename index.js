@@ -4,6 +4,10 @@ const express = require('express');
 
 const app = express();// initialize an app
 
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json()); // parse json
+
 const port = process.env.PORT || 4000;
 
 const server = app.listen(port, (error) => {
